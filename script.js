@@ -29,7 +29,7 @@ function showPosition(position) {
     localStorage.setItem('lat', latitude);
     localStorage.setItem('long', longitude);
     
-    
+    getLocationBtn.disabled = true;
     displayMap(latitude, longitude);
   }
 
@@ -49,7 +49,7 @@ removeLocationBtn.addEventListener('click', () => {
 
 // function to display map using Google Maps
 function displayMap(latitude, longitude) {
-mapDiv.innerHTML="";
+
   const mapUrl = `https://maps.google.com/maps?q=${latitude},${longitude}&output=embed`;
   const iframe = document.createElement('iframe');
   iframe.setAttribute('src', mapUrl);
