@@ -49,7 +49,7 @@ removeLocationBtn.addEventListener('click', () => {
 
 // function to display map using Google Maps
 function displayMap(latitude, longitude) {
-
+mapDiv.innerHTML="";
   const mapUrl = `https://maps.google.com/maps?q=${latitude},${longitude}&output=embed`;
   const iframe = document.createElement('iframe');
   iframe.setAttribute('src', mapUrl);
@@ -57,7 +57,7 @@ function displayMap(latitude, longitude) {
   iframe.setAttribute('height', '500');
   iframe.setAttribute('frameborder', '0');
   iframe.setAttribute('style', 'border:0');
-  mapDiv.innerHTML='';
+  
   mapDiv.appendChild(iframe);
 }
 
