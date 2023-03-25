@@ -57,6 +57,7 @@ function displayMap(latitude, longitude) {
   iframe.setAttribute('height', '500');
   iframe.setAttribute('frameborder', '0');
   iframe.setAttribute('style', 'border:0');
+  mapDiv.innerHTML='';
   mapDiv.appendChild(iframe);
 }
 
